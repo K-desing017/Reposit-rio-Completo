@@ -1,33 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema NAPNE – Login</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Escolar</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-box">
-    <h1>Sistema de Acompanhamento Acadêmico – NAPNE IFRS</h1>
 
-    <div class="acessibilidade">
-      <button type="button" id="btnAmais">A+</button>
-      <button type="button" id="btnAmenos">A-</button>
-      <button type="button" id="btnContraste">Alto Contraste</button>
-    </div>
+<!-- LOGIN -->
 
-    <form id="formLogin">
-      <label for="usuario">E‑mail</label>
-      <input type="text" id="usuario" required>
+<div id="login" class="pagina">
 
-      <label for="senha">Senha</label>
-      <input type="password" id="senha" required>
+<div class="card">
 
-      <button type="submit">Entrar</button>
-      <p id="erro" class="erro"></p>
-    </form>
-  </div>
+<h2>Login</h2>
 
-  <script src="script.js"></script>
+<input type="text" placeholder="Usuário">
+
+<input type="password" placeholder="Senha">
+
+<button onclick="abrirCadastro()">Entrar</button>
+
+</div>
+
+</div>
+
+<!-- CADASTRO -->
+
+<div id="cadastro" class="pagina oculto">
+
+<div class="card">
+
+<h2>Cadastro do Aluno</h2>
+
+<input type="text" placeholder="Nome">
+
+<input type="text" placeholder="Endereço">
+
+<input type="text" placeholder="Matrícula">
+
+<input type="text" placeholder="Telefone">
+
+<input type="email" placeholder="E-mail">
+
+<select>
+<option>Escolha o aluno</option>
+<option>Aluno 1</option>
+<option>Aluno 2</option>
+</select>
+
+<div class="botoes">
+
+<button onclick="abrirRelatorio()">
+Relatório
+</button>
+
+<button onclick="abrirCompetencias()">
+Competências
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RELATÓRIO -->
+
+<div id="relatorio" class="pagina oculto">
+
+<div class="card">
+
+<h2>Relatório</h2>
+
+<select>
+
+<option>Aluno</option>
+
+<option>Aluno 1</option>
+
+<option>Aluno 2</option>
+
+</select>
+
+<textarea placeholder="Competências"></textarea>
+
+<textarea placeholder="Dificuldades"></textarea>
+
+<button onclick="voltarCadastro()">
+Voltar
+</button>
+
+</div>
+
+</div>
+
+<!-- COMPETÊNCIAS -->
+
+<div id="competencias" class="pagina oculto">
+
+<div class="card">
+
+<h2>Competências</h2>
+
+<select>
+
+<option>Aluno</option>
+
+<option>Aluno 1</option>
+
+<option>Aluno 2</option>
+
+</select>
+
+<ul>
+
+<li>Competência 1</li>
+
+<li>Competência 2</li>
+
+<li>Competência 3</li>
+
+</ul>
+
+<button onclick="voltarCadastro()">
+Voltar
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
