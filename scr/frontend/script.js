@@ -1,52 +1,43 @@
-// Tamanho da fonte
-let tamanhoFonte = 16;
+function esconderTudo(){
 
-const btnAmais = document.getElementById('btnAmais');
-const btnAmenos = document.getElementById('btnAmenos');
-const btnContraste = document.getElementById('btnContraste');
-const formLogin = document.getElementById('formLogin');
+document.getElementById("login").classList.add("oculto");
 
-if (btnAmais) {
-  btnAmais.addEventListener('click', () => {
-    tamanhoFonte += 2;
-    document.body.style.fontSize = tamanhoFonte + "px";
-  });
+document.getElementById("cadastro").classList.add("oculto");
+
+document.getElementById("relatorio").classList.add("oculto");
+
+document.getElementById("competencias").classList.add("oculto");
+
 }
 
-if (btnAmenos) {
-  btnAmenos.addEventListener('click', () => {
-    tamanhoFonte = Math.max(12, tamanhoFonte - 2);
-    document.body.style.fontSize = tamanhoFonte + "px";
-  });
+function abrirCadastro(){
+
+esconderTudo();
+
+document.getElementById("cadastro").classList.remove("oculto");
+
 }
 
-// Alto contraste — hífen normal "-"
-if (btnContraste) {
-  btnContraste.addEventListener('click', () => {
-    document.body.classList.toggle('alto-contraste');
-  });
+function abrirRelatorio(){
+
+esconderTudo();
+
+document.getElementById("relatorio").classList.remove("oculto");
+
 }
 
-// LOGIN — ABRE EM NOVA ABA, ou remova "_blank" se quiser mesma janela
-if (formLogin) {
-  formLogin.addEventListener('submit', e => {
-    e.preventDefault();
+function abrirCompetencias(){
 
-    const usuario = document.getElementById('usuario').value.trim();
-    const senha = document.getElementById('senha').value;
-    const erro = document.getElementById('erro');
+esconderTudo();
 
-    if (usuario === 'admin@napne.br' && senha === '123456') {
-      erro.textContent = '';
-      window.open('tela_admin.html'); // ← nova aba
-    } else if (usuario === 'professor@napne.br' && senha === '123456') {
-      erro.textContent = '';
-      window.open('tela_professor.html');
-    } else if (usuario === 'aluno@napne.br' && senha === '123456') {
-      erro.textContent = '';
-      window.open('tela_aluno.html');
-    } else {
-      erro.textContent = 'Usuário ou senha inválidos.';
-    }
-  });
+document.getElementById("competencias").classList.remove("oculto");
+
+}
+
+function voltarCadastro(){
+
+esconderTudo();
+
+document.getElementById("cadastro").classList.remove("oculto");
+
 }
